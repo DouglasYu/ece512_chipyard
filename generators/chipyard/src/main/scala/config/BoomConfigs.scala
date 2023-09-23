@@ -10,20 +10,20 @@ class SmallBoomConfig extends Config(
   new boom.common.WithNSmallBooms(1) ++                          // small boom config
   new chipyard.config.AbstractConfig)
 
+class requiredFirstBoomConfig extends Config(
+  new boom.common.requiredFirstBooms(1) ++                          // small boom config
+  new chipyard.config.AbstractConfig)
+
+class requiredSecondBoomConfig extends Config(
+  new boom.common.requiredSecondBooms(1) ++                          // small boom config
+  new chipyard.config.AbstractConfig)
+
 class myFirstBoomConfig extends Config(
   new boom.common.myFirstBooms(1) ++                          // small boom config
   new chipyard.config.AbstractConfig)
 
 class mySecondBoomConfig extends Config(
   new boom.common.mySecondBooms(1) ++                          // small boom config
-  new chipyard.config.AbstractConfig)
-
-class myThirdBoomConfig extends Config(
-  new boom.common.myThirdBooms(1) ++                          // small boom config
-  new chipyard.config.AbstractConfig)
-
-class myFourthBoomConfig extends Config(
-  new boom.common.myFourthBooms(1) ++                          // small boom config
   new chipyard.config.AbstractConfig)
 
 class MediumBoomConfig extends Config(
