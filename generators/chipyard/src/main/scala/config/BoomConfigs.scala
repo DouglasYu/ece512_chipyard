@@ -26,6 +26,30 @@ class mySecondBoomConfig extends Config(
   new boom.common.mySecondBooms(1) ++                          // small boom config
   new chipyard.config.AbstractConfig)
 
+class NlLargeBoomConfig extends Config(
+  new boom.common.WithNlPrefetcherLargeBooms(1) ++               // large boom with NL prefetcher
+  new chipyard.config.AbstractConfig)
+
+class StrideLargeBoomConfig extends Config(
+  new boom.common.WithNlPrefetcherLargeBooms(1) ++               // large boom with stride prefetcher. Note: you need to change mshrs.scala
+  new chipyard.config.AbstractConfig)
+
+class NlLargerDCacheLargeBoomConfig extends Config(
+  new boom.common.WithNlPrefetcherLargerDCacheLargeBooms(1) ++   // large boom with NL prefetcher, larger D-cache size
+  new chipyard.config.AbstractConfig)
+
+class NlSmallerDCacheLargeBoomConfig extends Config(
+  new boom.common.WithNlPrefetcherSmallerDCacheLargeBooms(1) ++  // large boom with NL prefetcher, smaller D-cache size
+  new chipyard.config.AbstractConfig)
+
+class LargerDCacheLargeBoomConfig extends Config(
+  new boom.common.LargerDCacheLargeBooms(1) ++                  // large boom without NL prefetcher, larger D-cache size
+  new chipyard.config.AbstractConfig)
+
+class SmallerDCacheLargeBoomConfig extends Config(
+  new boom.common.SmallerDCacheLargeBooms(1) ++                 // large boom without NL prefetcher, smaller D-cache size
+  new chipyard.config.AbstractConfig)
+
 class MediumBoomConfig extends Config(
   new boom.common.WithNMediumBooms(1) ++                         // medium boom config
   new chipyard.config.AbstractConfig)
